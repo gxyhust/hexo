@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives | 强强的个人空间</title>
+  <title>对CPU密集型业务的性能优化 | 强强的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="强强的个人空间">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一、问题描述CDA系统分析功能属于CPU密集型操作，存在性能瓶颈，需要提升40倍性能才能满足业务需求 二、解决策略1、首先梳理该功能在单任务处理流程上是否存在优化的可能。 例如： a、数据库读写时间是否正常 b、流程是否存在冗余步骤 c、缓存机制等是否可以节省业务流程等 2、在确信步骤1已经优化到一个瓶颈后，尝试使用分布式计算的方案，这虽然会提升架构的复杂度，以及分析定位问题的难度，但通常都是最有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对CPU密集型业务的性能优化">
+<meta property="og:url" content="http://yoursite.com/2020/05/24/%E5%AF%B9CPU%E5%AF%86%E9%9B%86%E5%9E%8B%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="强强的个人空间">
+<meta property="og:description" content="一、问题描述CDA系统分析功能属于CPU密集型操作，存在性能瓶颈，需要提升40倍性能才能满足业务需求 二、解决策略1、首先梳理该功能在单任务处理流程上是否存在优化的可能。 例如： a、数据库读写时间是否正常 b、流程是否存在冗余步骤 c、缓存机制等是否可以节省业务流程等 2、在确信步骤1已经优化到一个瓶颈后，尝试使用分布式计算的方案，这虽然会提升架构的复杂度，以及分析定位问题的难度，但通常都是最有">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-24T03:30:06.000Z">
+<meta property="article:modified_time" content="2020-05-24T03:30:10.709Z">
 <meta property="article:author" content="gxy">
 <meta name="twitter:card" content="summary">
   
@@ -59,107 +63,63 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/05/24/%E5%AF%B9CPU%E5%AF%86%E9%9B%86%E5%9E%8B%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  <time datetime="2020-05-24T03:30:06.000Z" itemprop="datePublished">May 24</time>
+        <section id="main"><article id="post-对CPU密集型业务的性能优化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/24/%E5%AF%B9CPU%E5%AF%86%E9%9B%86%E5%9E%8B%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="article-date">
+  <time datetime="2020-05-24T03:30:06.000Z" itemprop="datePublished">2020-05-24</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/24/%E5%AF%B9CPU%E5%AF%86%E9%9B%86%E5%9E%8B%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">对CPU密集型业务的性能优化</a>
+    <h1 class="article-title" itemprop="name">
+      对CPU密集型业务的性能优化
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/05/24/hello-world/" class="archive-article-date">
-  <time datetime="2020-05-24T01:47:09.392Z" itemprop="datePublished">May 24</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/24/hello-world/">使用HEXO写博客的常用命令</a>
-    </h1>
-  
+        <h2 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h2><p>CDA系统分析功能属于CPU密集型操作，存在性能瓶颈，需要提升40倍性能才能满足业务需求</p>
+<h2 id="二、解决策略"><a href="#二、解决策略" class="headerlink" title="二、解决策略"></a>二、解决策略</h2><p>1、首先梳理该功能在单任务处理流程上是否存在优化的可能。</p>
+<p>例如：</p>
+<p>a、数据库读写时间是否正常</p>
+<p>b、流程是否存在冗余步骤</p>
+<p>c、缓存机制等是否可以节省业务流程等</p>
+<p>2、在确信步骤1已经优化到一个瓶颈后，尝试使用分布式计算的方案，这虽然会提升架构的复杂度，以及分析定位问题的难度，但通常都是最有效的方案。具体实施包括：</p>
+<p>a、改造之前的业务流程，让其符合分布式的流程，举例来说：计算单元通用的入参、出参数据结构，计算单元本身支持通用解析等</p>
+<p>b、有限长度的输入，输出队列，如果超过队列长度，需要阻塞生产操作</p>
+<p>c、采集汇总计算结果</p>
+<h2 id="三、收益"><a href="#三、收益" class="headerlink" title="三、收益"></a>三、收益</h2><p>1、改造完毕后，该模块处理性能与CPU核心数强相关，需要提升多少性能，只需要增加相应的计算单元即可</p>
+<p>2、与计算的弹性伸缩只差一个调度算法</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/24/%E5%AF%B9CPU%E5%AF%86%E9%9B%86%E5%9E%8B%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="ckaki93kw0003voyo6hw2gm2j" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/07/08/audioTest/" class="archive-article-date">
-  <time datetime="2018-07-08T05:42:24.000Z" itemprop="datePublished">Jul 8</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/08/audioTest/">audioTest</a>
-    </h1>
   
+    <a href="/2020/05/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用HEXO写博客的常用命令</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/17/next-theme/" class="archive-article-date">
-  <time datetime="2018-06-17T02:07:38.000Z" itemprop="datePublished">Jun 17</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/17/next-theme/">TODO LIST</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
